@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the Number Game</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background: #eef2f3; padding: 50px; }
+        .game-card { background: white; padding: 30px; border-radius: 15px; display: inline-block; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        input { padding: 10px; font-size: 1.2rem; width: 60px; }
+        button { padding: 10px 20px; font-size: 1.2rem; cursor: pointer; background: #27ae60; color: white; border: none; border-radius: 5px; }
+        #message { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="game-card">
+        <h1>Number Guesser</h1>
+        <p>I'm thinking of a number between 1 and 100.</p>
+        <input type="number" id="guessInput">
+        <button onclick="checkGuess()">Guess!</button>
+        <p id="message"></p>
+        
+    </div>
+
+    <script>
+        const target = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        function checkGuess() {
+            const userGuess = document.getElementById('guessInput').value;
+            const message = document.getElementById('message');
+            attempts++;
+
+            if (userGuess == target) {
+                message.innerHTML = `🎉 Correct! It took you ${attempts} tries.`;
+                message.style.color = "green";
+            } else if (userGuess > target) {
+                message.innerHTML = "Too high! Try again.";
+                message.style.color = "orange";
+            } else {
+                message.innerHTML = "Too low! Try again.";
+                message.style.color = "blue";
+            }
+        }
+    </script>
+</body>
+</html>

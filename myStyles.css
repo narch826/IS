@@ -1,0 +1,32 @@
+/* REQUIREMENT: Custom background color/image */
+body {
+    background-color: #b09f84; /* This is a "OldLace" white; very professional */
+    margin: 40px;
+    /* REQUIREMENT: Font Family */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* REQUIREMENT: Font Color */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* REQUIREMENT: Style Definition for one of the Divs */
+.header-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.content-block {
+    color: #34495e;
+    line-height: 1.6;
+}
+
+.video-section {
+    padding: 20px;
+    background: #e1e8ed;
+}
